@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@mui/material";
+import React from "react";
+import { useSelector } from "react-redux";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes";
+import { logger, MUITheme } from "./helpers";
 
 function App() {
+  const state = useSelector((s: any) => s.alert);
+  logger.info("Env: ", process.env.REACT_APP_ENV);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={MUITheme()}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </>
   );
 }
 
-export default App;
+export default React.memo(App);

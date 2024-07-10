@@ -1,0 +1,28 @@
+@import '../../../assets/styles/colors.scss';
+
+.footer-main{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: $secondary !important;
+    border: 1px solid #D1E4F5;
+    z-index: 9999;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    color: $primary;
+}
+
+.footer-list{
+    color: $primary;
+    text-align: right;
+    list-style: none;
+    justify-content: end;
+    li{
+        margin-right: 15px;
+        cursor: pointer;
+        color: $primary;
+    }
+}

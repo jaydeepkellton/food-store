@@ -1,0 +1,42 @@
+.sidebar-list {
+  position: relative;
+  padding-bottom: 30px !important;
+  font-family: sans-serif !important;
+  span {
+    font-family: sans-serif !important;
+  }
+  li:first-child {
+    margin-top: 20px !important;
+  }
+}
+.sidebar-footer-main {
+  position: absolute;
+  left: 30px;
+  bottom: 4%;
+  h6 {
+    color: #1F66A8;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  p {
+    overflow: hidden !important;
+    color: #1F66A8;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+.open-sidebar {
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
