@@ -34,14 +34,14 @@ const Category: React.FC = () => {
     localStorage.setItem("favourites", JSON.stringify(favourites));
   }, [favourites]);
 
-  const addFavourite = (category: any) => {
+  const addToFavourite = (category: any) => {
     setFavourites((prevFavorites: any) => {
       const newFavorites = [...prevFavorites, category];
       return newFavorites;
     });
   };
 
-  const removeFavorite = (idMeal: any) => {
+  const removeFavourite = (idMeal: any) => {
     setFavourites((prevFavorites: any) =>
       prevFavorites.filter((category: any) => category.idMeal !== idMeal)
     );
@@ -75,10 +75,12 @@ const Category: React.FC = () => {
                 </CardContent>
                 {isFavourite(category.idMeal) ? (
                   <FavoriteIcon
-                    onClick={() => removeFavorite(category.idMeal)}
+                    onClick={() => removeFavourite(category.idMeal)}
                   />
                 ) : (
-                  <FavoriteBorderIcon onClick={() => addFavourite(category)} />
+                  <FavoriteBorderIcon
+                    onClick={() => addToFavourite(category)}
+                  />
                 )}
               </CardActionArea>
             </Card>

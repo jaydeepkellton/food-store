@@ -15,11 +15,6 @@ const Footer: React.FC = () => {
           <MUIGrid item md={6} lg={6}>
             <div onClick={() => navigate("/about-me")}>About Me</div>
           </MUIGrid>
-          <MUIGrid item md={6} lg={6}>
-            <ul className='d-flex footer-list'>
-              <li onClick={() => navigate("/home")}>Home</li>
-            </ul>
-          </MUIGrid>
         </MUIGrid>
       </div>
     </>

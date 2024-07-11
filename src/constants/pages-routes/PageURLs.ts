@@ -10,8 +10,7 @@ export enum PageNames {
 
   NotFound = "NotFound",
   ErrorPage = "ErrorPage",
-  AccessDenied = "AccessDenied",
-  AuthValidate = "AuthValidate",
+
   InternalServerError = "InternalServerError",
 }
 
@@ -22,8 +21,6 @@ export type PageURLs = Record<PageNames, string>;
 export const PAGE_URL: PageURLs = {
   [PageNames.Root]: "/",
 
-  [PageNames.AuthValidate]: "/login",
-
   [PageNames.Home]: "/home",
   [PageNames.Menu]: "/menu",
   [PageNames.MyFavourites]: "/my-favourites",
@@ -32,6 +29,6 @@ export const PAGE_URL: PageURLs = {
 
   [PageNames.ErrorPage]: "/error",
   [PageNames.NotFound]: "/not-found",
-  [PageNames.AccessDenied]: "/access-denied",
+
   [PageNames.InternalServerError]: "/internal-server-error",
 };

@@ -1,7 +1,6 @@
 export const PAGES_ROUTES = {
   ErrorPage: "/error",
 
-  AccessDenied: "/access-denied",
   ComingSoon: "/coming-soon",
   NotFound: "/not-found",
   RootPage: "/",
